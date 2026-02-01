@@ -187,3 +187,7 @@ firstname {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+
+/* Icons for social / resource links */
+.boxed { display: inline-flex; align-items: center; gap: 6px; }
+.boxed i { margin-right: 4px; line-height: 1; }
