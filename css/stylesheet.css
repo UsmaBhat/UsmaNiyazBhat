@@ -3,6 +3,19 @@ html {
   scroll-padding-top: 40px;
 }
 
+/* Bergamo Std font - place font files in `fonts/` (BergamoStd.woff2 / BergamoStd.woff)
+   If Bergamo Std is installed system-wide, these files are optional. */
+@font-face {
+  font-family: 'Bergamo Std';
+  /* Try local system font first (if installed), then project font files */
+  src: local('Bergamo Std'), local('BergamoStd'),
+       url('../fonts/BergamoStd.woff2') format('woff2'),
+       url('../fonts/BergamoStd.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -15,8 +28,8 @@ a:hover {
 }
 
 body {
-  /* font-family: 'Lato', sans-serif; */
-  font-family: 'Roboto', sans-serif;
+  /* Use a serif stack site-wide */
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -146,7 +159,7 @@ firstname {
   color: #000 !important;
   /* border: 1px solid #839cbf; */
   border: 1px solid #839cbf;
-  font-family: monospace;
+  font-family: inherit;
   padding: 2px 5px 0px;
   font-size: 14px;
   /* background: #d4dce9; */
@@ -191,3 +204,20 @@ firstname {
 /* Icons for social / resource links */
 .boxed { display: inline-flex; align-items: center; gap: 6px; }
 .boxed i { margin-right: 4px; line-height: 1; }
+
+/* Utility to justify text */
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Make all paragraph text justified by default */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Also justify list items in news for cleaner layout */
+.news li {
+  text-align: justify;
+}
